@@ -5,73 +5,46 @@
   >
     <div class="flex flex-col items-center justify-center py-10">
       <div class="text-6xl items-center font-black text-indigo-900">
-        Unidad 3
+        Unidad 5
       </div>
       <div class="text-xl font-medium text-indigo-900">
-        <p>Tecnologías WAN!</p>
+        <p>Puertos y Buses de Comunicación para Microcontroladores</p>
       </div>
     </div>
     <div class="flex h-full px-10 items-center justify-center flex-col w-3/4">
       <div class="text-left w-full">
         <div class="text-6xl font-black text-indigo-900 ">
-          3.5
+          5.5
         </div>
         <div class="text-xl font-bold text-indigo-900 py-5">
-          Configuración de dispositivos WAN
+          Manejo del Bus
         </div>
       </div>
 
       <div class="text-justify">
-        <p class="leading-8">
-          Las tecnologías WAN en su mayoría utilizan transmisiones seriales. Al
-          seleccionar una implementación WAN, se debe hacer coincidir la
-          tecnología WAN con el tipo de dispositivos requeridos.
+        <p>
+          Con el objetivo de solucionar los problemas antes mencionados y de
+          poder reusar nuestros diseños, así como también usar diseños
+          realizados por otros grupos adoptamos el estándar de interconexión
+          Wishbone.
         </p>
-        <ul class="leading-8 my-5">
+
+        <h3><b>Bus de expansión</b></h3>
+        <p>
+          En una primera aproximación creamos un bus de expansión
+          específicamente creado para el microcontrolador. Esto tiene
+          importantes desventajas, entre ellas:
+        </p>
+        <ul>
           <li>
-            <b>
-              Dispositivo de traducción y control: módem, CSU/DSU y Router.
-            </b>
+            Para conectar periféricos creados por otros grupos de trabajo es
+            necesario adaptarlos a la señalización del bus en cuestión
           </li>
-          <div class="flex align-center justify-center">
-            <img
-              class="img my-5 rounded"
-              src="../assets/modem.png"
-              alt="modem"
-            />
-          </div>
           <li>
-            <b>
-              Oficina central y equipo local del cliente.
-            </b>
+            Periféricos diseñados para ese bus no servían para ser usados en
+            otros diseños con buses de otro tamaño. Por ejemplo: no servían para
+            un bus de 16 o 32 bits sin ser adaptados.
           </li>
-          <div class="flex align-center justify-center">
-            <img
-              class="img my-5 rounded"
-              src="../assets/empresa.png"
-              alt="empresa"
-            />
-          </div>
-          <li>
-            <b>
-              Estándares de la capa física: HSSI, V.35, RS232.
-            </b>
-          </li>
-          <div class="flex align-center justify-center">
-            <img class="img my-5 rounded" src="../assets/hsi.jpg" alt="hsi" />
-          </div>
-          <li>
-            <b>
-              Señalización o codificación, velocidad de enlace
-            </b>
-          </li>
-          <div class="flex align-center justify-center">
-            <img
-              class="img-2 my-5 rounded"
-              src="../assets/señal.jpg"
-              alt="señal"
-            />
-          </div>
         </ul>
       </div>
       <div class="py-5">

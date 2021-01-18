@@ -5,75 +5,110 @@
   >
     <div class="flex flex-col items-center justify-center py-10">
       <div class="text-6xl items-center font-black text-indigo-900">
-        Unidad 3
+        Unidad 5
       </div>
       <div class="text-xl font-medium text-indigo-900">
-        <p>Tecnologías WAN!</p>
+        <p>Puertos y Buses de Comunicación para Microcontroladores</p>
       </div>
     </div>
     <div class="flex h-full px-10 items-center justify-center flex-col w-3/4">
       <div class="text-left w-full">
         <div class="text-6xl font-black text-indigo-900 ">
-          3.2
+          5.2
         </div>
         <div class="text-xl font-bold text-indigo-900 py-5">
-          Tipos de enlaces: conmutados, dedicados
+          Programación de puertos
         </div>
       </div>
 
       <div class="text-justify">
-        <p class="leading-8">
-          <b>ENLACES COMUTADOS</b><br />
-          Los enlaces conmutados se dividen en dos tipos:
-        </p>
-
-        <ul>
-          <li>
-            <b>Analógicos:</b> llegan hasta velocidades de 53 kbpspara el
-            downlink y hasta de 48 kbps para el uplink.
-          </li>
-          <li>
-            <b>Digitales:</b> transmiten a 64 kbps o 128 kbps. Estos últimos son
-            conocidos como enlaces RDSI (Red Digital de Servicios Integrados).
-          </li>
-        </ul>
-        <div class="flex align-center justify-center">
-          <img class="img my-5" src="../assets/conmited.jpg" alt="conmuted" />
+        <div class="col1">
+          <p>
+            Existen instrucciones en C que permiten enviar o recibir información
+            por un puerto, entre ellas se tienen:
+          </p>
+          <ul style="list-style-type:none;">
+            <li>
+              OUTPUT_X (VALOR);<br />
+              Saca por el puerto indicado en la “X” un valor entre 0 y 255
+            </li>
+            <br />
+            <li>
+              INPUT_X ( ); <br />
+              Toma del puerto indicado en la “X” el valor que posee en sus
+              terminales
+            </li>
+          </ul>
+          <br />
+          <p>
+            Estas son funciones que a su vez configuran los puertos, si la
+            operación es input, configura el puerto como entrada y si es output,
+            configura el puerto como salida. <br /><br />
+          </p>
         </div>
+        <div class="col2">
+          <p>
+            Existen instrucciones que manejan un solo bit de un registro entre
+            ellas están:
+          </p>
+          <ul style="list-style-type:none;">
+            <li>
+              OUTPUT_LOW (PIN);<br />
+              Pone determinado pin a cero
+            </li>
+            <br />
+            <li>
+              OUTPUT_HIGH (PIN); <br />
+              Pone determinado pin a uno
+            </li>
+            <br />
+            <li>
+              OUTPUT_BIT (PIN, VALOR); <br />
+              Pone determinado pin al valor especificado
+            </li>
+            <br />
+            <li>
+              OUTPUT_TOGGLE (PIN);<br />
+              Complemente el valor de determinado pin
+            </li>
+            <br />
+            <li>
+              INPUT (PIN); <br />
+              Lee el valor de determinado pin
+            </li>
+          </ul>
+          <br />
+          <p>
+            Estas instrucciones se comportan igual que las anteriores,
+            autoconfiguran los puertos dependiendo si es una operación output
+            (salida) o input (entrada). <br /><br />
+            Existen instrucciones que manejan un solo bit de un registro entre
+            ellas están:
+          </p>
+        </div>
+      </div>
+      <div class="col3">
+        <h3>
+          <b
+            >CONFIGURACIÓN DE PUERTOS MEDIANTE MODIFICACIÓN DE LOS REGISTROS
+            TRIS</b
+          >
+        </h3>
         <br />
-        <b>ENLACES DEDICADOS</b>
-        <br /><br />
-        Fueron la primera tecnología WAN que se adoptó usando la infraestructura
-        de voz de los distintos operadores de telefonía. Se necesitaban
-        conexiones físicas reales necesitando de un proveedor en cada sitio
-        resultando en una solo línea de comunicación entre dos partes.
-        <ul>
-          <li>
-            Son enlaces donde solo interviene la red de transporte del proveedor
-            de servicios.
-          </li>
-          <li>
-            Para el mercado corporativo comúnmente van desde los 64 kbit/s hasta
-            los.
-          </li>
-          <li>
-            Son enlaces donde solo interviene la red de transporte del proveedor
-            de servicios.
-          </li>
-          <li>Vandesde los 64 kbps a 2048 kbps.</li>
-          <li>Elevada eficiencia en las transmisiones.</li>
-          <li>
-            Tarifas planas (sin influencia del tráfico cursado) en función del
-            ancho de banda contratado.
-          </li>
-        </ul>
-        <div class="flex align-center justify-center">
-          <img
-            class="img my-5 rounded"
-            src="../assets/dedicated.jpg"
-            alt="dedicated"
-          />
-        </div>
+        <p>
+          Para configurar los puertos como entrada o salida, se utilizan los
+          registros TRISX, donde la X representa el nombre del puerto (A, B, C,
+          D, E), si se desea el puerto como entrada se debe poner a “1” y si es
+          como salida se debe poner a “0” el bit correspondiente del registro
+          TRIS, para ello se utilizan la funciones:
+        </p>
+        <br />SET_TRIS_X (VALOR);<br />
+        <p>
+          Se utiliza para configurar el registro tris de determinado puerto, por
+          ejemplo si se pone SET_TRIS_B (0B00001111), quiere decir que se está
+          configurando los cuatro bits más significativos del puerto B como
+          salida y los cuatros bits menos significativos como entrada
+        </p>
       </div>
       <div class="py-5">
         <router-link

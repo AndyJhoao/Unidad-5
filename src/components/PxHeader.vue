@@ -29,16 +29,17 @@
     </div>
     <div class="flex flex-col h-screen py-16 px-10 content-start">
       <div>
-        <p class="sm:text-6xl font-black text-indigo-900 text-5xl">Unidad 3</p>
+        <p class="sm:text-6xl font-black text-indigo-900 text-5xl">Unidad 5</p>
       </div>
       <div class="flex flex-col justify-center h-72 w-72 px-3">
         <div class="py-5 text-xl font-medium text-indigo-900">
-          <p>Tecnologías WAN</p>
+          <p>Puertos y Buses de Comunicación para Microcontroladores</p>
           <br />
           <p>
-            Una WAN (Wide Area Network o Red de Cobertura Amplia) es una red de
-            comunicación de datos que opera más allá del alcance geográfico de
-            una LAN. Una de las diferencias primordiales entre una WAN.
+            un puerto es una interfaz a través de la cual se pueden enviar y
+            recibir los diferentes tipos de datos. La interfaz puede ser de tipo
+            física o puede ser a nivel lógico o de software, en cuyo caso se usa
+            frecuentemente el término puerto lógico.
           </p>
         </div>
         <div class="py-5 my-3">
@@ -76,7 +77,7 @@
         <div class="w-full h-full flex align-center justify-center">
           <img
             class="fondo-2 xl:bottom-100 xl:left-50 bottom-0 left-0 "
-            src="../assets/wan-header.png"
+            src="https://cdn.mikroe.com/ebooks/img/38/2016/02/al-mundo-de-los-microcontroladores-basic-chapter-01-fig0-1.gif"
             alt="wan"
           />
         </div>

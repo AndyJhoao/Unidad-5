@@ -6,6 +6,8 @@ import view2 from "@/views/view-2";
 import view3 from "@/views/view-3";
 import view4 from "@/views/view-4";
 import view5 from "@/views/view-5";
+import view6 from "@/views/view-6";
+import view7 from "@/views/view-7";
 
 Vue.use(Router);
 
@@ -41,6 +43,16 @@ export default new Router({
       path: "/view-5",
       name: "view-5",
       component: view5,
+    },
+    {
+      path: "/view-6",
+      name: "view-6",
+      component: view6,
+    },
+    {
+      path: "/view-7",
+      name: "view-7",
+      component: view7,
     },
 
     // {
