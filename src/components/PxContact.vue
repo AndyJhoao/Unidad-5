@@ -14,7 +14,7 @@
       <div class="w-2/5 text-center">
         Andy Jhoao Huacre Molina estudiante del Instituto Tecnologico de
         Cuautla. <br />
-        <b>Conmutación y enrutamiento de redes de datos</b><br />
+        <b>Sistenas Programables</b><br />
         Correo de contacto : <b>andy_joao@live.com</b>
       </div>
     </div>
